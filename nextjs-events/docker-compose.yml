@@ -1,0 +1,11 @@
+version: "3"
+services:
+  db:
+    container_name: real_time_db
+    image: rethinkdb:latest
+    volumes:
+      - ./.docker_data/rethinkdb:/data
+    ports:
+      - "8080:8080"
+      - "29015:29015"
+      - "28015:28015"
